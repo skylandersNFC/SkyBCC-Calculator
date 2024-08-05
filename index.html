@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBCC Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Calculate the BCC of your Mifare Classic 1K 4-byte UID</h1>
+    </section>
+    <section>
+        <form id="bcc-form">
+            <label for="uid">Enter the 4-byte UID in Hex format:</label>
+            <br><br>
+            <label for="uid"><strong>UID: </strong></label>
+            <input type="text" id="uid" placeholder="00000000" minlength="8" maxlength="8" required>
+            <br>
+            <input type="submit" value="Calculate BCC" id="generate-btn"/>
+        </form>
+        <div id="result" style="display: none;">
+            <strong><p id="bcc-value">BCC: <span id="bcc-number"></span></p></strong>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
